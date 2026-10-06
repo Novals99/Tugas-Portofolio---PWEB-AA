@@ -738,3 +738,14 @@ section {
     font-size: 1.75rem;
   }
 }
+
+/* Image Preview Clickable Cursor */
+.img-preview-trigger {
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.img-preview-trigger:hover {
+  opacity: 0.92;
+}
+
