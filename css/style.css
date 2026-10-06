@@ -120,6 +120,65 @@ section {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #ffffff;
   position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-section::before {
+  background:
+    radial-gradient(circle at 15% 25%, rgba(96, 165, 250, 0.17), transparent 18%),
+    radial-gradient(circle at 72% 18%, rgba(34, 211, 238, 0.12), transparent 22%),
+    radial-gradient(circle at 78% 72%, rgba(148, 163, 184, 0.12), transparent 20%),
+    linear-gradient(rgba(15, 118, 110, 0.04), rgba(15, 118, 110, 0.04)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.05) 0,
+      rgba(148, 163, 184, 0.05) 1px,
+      transparent 1px,
+      transparent 72px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(148, 163, 184, 0.04) 0,
+      rgba(148, 163, 184, 0.04) 1px,
+      transparent 1px,
+      transparent 72px
+    );
+  background-size: auto, auto, auto, auto, auto, auto;
+  opacity: 0.9;
+}
+
+.hero-section::after {
+  content: "const user = { role: 'IS' };\A if (ready) { learn(); }\A 01 10 01 10\A &lt;/&gt; // system\A 0 1 1 0\A { data, sync }";
+  position: absolute;
+  right: 9%;
+  top: 12%;
+  width: 24%;
+  min-width: 180px;
+  color: rgba(148, 163, 184, 0.32);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  text-align: left;
+  white-space: pre-line;
+  filter: blur(0.15px);
+  transform: rotate(2deg);
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-status-pill {
