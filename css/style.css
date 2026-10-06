@@ -749,3 +749,18 @@ section {
   opacity: 0.92;
 }
 
+/* Image Preview Modal Sizing */
+#imagePreviewModal .modal-dialog {
+  max-width: 90vw;
+  width: 90vw;
+}
+
+#imagePreviewModal #modalPreviewImage {
+  max-height: 82vh;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
